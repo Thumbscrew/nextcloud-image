@@ -8,11 +8,11 @@ pipeline {
     stage('Build') {
       steps {
         container('docker') {
-          script {
-            def dockerImage = docker.build("nextcloud:test")
+          sh """ 
+            docker build -t nextcloud:test
 
-            sh 'docker rmi -f nextcloud:test'
-          }
+            docker rmi -f nextcloud:test
+          """
         }
       }
     }
