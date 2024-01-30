@@ -9,7 +9,7 @@ pipeline {
       steps {
         container('docker') {
           sh """ 
-            docker build -t nextcloud:test
+            docker build -t nextcloud:test .
 
             docker rmi -f nextcloud:test
           """
