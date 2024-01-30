@@ -7,10 +7,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        script {
-          def dockerImage = docker.build("nextcloud:test")
+        container('docker') {
+          script {
+            def dockerImage = docker.build("nextcloud:test")
 
-          sh 'docker rmi -f nextcloud:test'
+            sh 'docker rmi -f nextcloud:test'
+          }
         }
       }
     }
