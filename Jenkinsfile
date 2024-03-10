@@ -9,7 +9,7 @@ pipeline {
       steps {
         container('docker') {
           sh """ 
-            docker build --build-args=NEXTCLOUD_TAG=27.1.6 -t nextcloud:test .
+            docker build -t nextcloud:test --build-arg NEXTCLOUD_TAG=27.1.6-apache .
 
             docker rmi -f nextcloud:test
           """
