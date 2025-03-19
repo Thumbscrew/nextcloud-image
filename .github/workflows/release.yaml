@@ -3,7 +3,7 @@ name: Build and Push new tag to ECR
 on:
   push:
     tags:
-      - "*"
+      - "*.*.*"
 
 jobs:
   build:
