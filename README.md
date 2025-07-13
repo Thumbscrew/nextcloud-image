@@ -1,3 +1,6 @@
+> [!WARNING]
+> This repository is now archived and has been moved to https://gitea.intmain.co.uk/thumbscrw/nextcloud-image
+
 # Customised Nextcloud Image
 
 ## Build
